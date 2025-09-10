@@ -76,6 +76,7 @@ class MovieViewSet(
         serializer = MovieImageSerializer(
             movie,
             data=request.data,
+            context={"request": request}
         )
         if serializer.is_valid():
             serializer.save()
