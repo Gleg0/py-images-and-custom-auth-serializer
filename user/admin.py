@@ -5,7 +5,7 @@ from .models import User
 
 @admin.register(User)
 class UserAdmin(UserAdmin):
-    ordering = ["email"]  # замість 'username'
+    ordering = ["email"]
     list_display = ["email", "is_staff", "is_active"]
     search_fields = ["email"]
 
